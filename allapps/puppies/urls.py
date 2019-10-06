@@ -5,5 +5,7 @@ from . import views
 app_name = 'puppies'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('api/v1/puppies/<int:puppy_id>/', views.get_delete_update_puppy,
+         name='get_delete_update_puppy'),
+    path('api/v1/puppies/', views.get_post_puppies, name='get_post_puppies'),
 ]

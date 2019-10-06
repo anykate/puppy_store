@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Third party apps
     'bootstrap4',
     'django_extensions',
+    'rest_framework',
 
     # My apps
     'allapps.puppies.apps.PuppiesConfig',
@@ -138,3 +139,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+}
